@@ -1,0 +1,670 @@
+/* variables */
+
+:root {
+  --colYellow: #f1ff4b;
+  --colBlue: #5041ff;
+  --colgrey: #e4e4e4;
+}
+
+/* fonts */
+@font-face {
+  font-family: archivo;
+  src: url(../fonts/Archivo_Black/ArchivoBlack-Regular.ttf);
+}
+
+@font-face {
+  font-family: open-sans;
+  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+  src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+
+/* main sections */
+
+body {
+  background-color: white;
+  font-family: open-sans;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--colYellow);
+  z-index: 5;
+  /* background-image: url(../assets/giu-vicente-c5UCzwjpQzY-unsplash.jpg);
+  background-size: 120% 100%;
+  background-repeat: no-repeat;
+  background-position: center -225px; */
+}
+
+main {
+  margin: 0 auto;
+  /* background-color: red; */
+  /* max-width: 71.5%; */
+}
+
+section {
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 76vw;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding-left: 10.17vw;
+  padding-right: 10.17vw;
+}
+
+#footerWrapper {
+  color: white;
+  max-width: 1000px;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+h1 {
+  line-height: 130%;
+  font-family: archivo;
+  font-size: 10vw;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  /* background-color: red; */
+}
+
+h2 {
+  line-height: 130%;
+  font-family: archivo;
+  color: black;
+  font-size: 50px;
+}
+
+h3 {
+  line-height: 130%;
+  font-family: archivo;
+  color: var(--colBlue);
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+h4 {
+  line-height: 130%;
+  font-family: archivo;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+h5 {
+  font-family: archivo;
+  color: black;
+  font-size: 20px;
+  margin: 10px;
+  max-width: 70%;
+  animation: 25ms;
+}
+
+p {
+  line-height: 130%;
+  color: black;
+  font-size: 21px;
+}
+
+a {
+  font-family: open-sans;
+  line-height: 175%;
+}
+
+span {
+  font-size: 20px;
+  color: white;
+  line-height: 130%;
+}
+
+.greyText {
+  font-family: open-sans;
+  font-size: 14px;
+  color: lightgray;
+}
+
+nav .ui-selectmenu-button {
+  background-color: white;
+  border: none;
+  border-top: 1px lightgray solid;
+}
+
+.ui-selectmenu-text {
+  font-family: open-sans;
+  font-size: 14px;
+  font-weight: 100;
+  color: lightgray;
+}
+
+.ui-button .ui-icon {
+  background-image: url(../assets/icons/noun_Arrow_2335640.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+}
+
+.ui-menu-item-wrapper {
+  background-color: var(--colBlue);
+  color: var(--colYellow);
+  font-size: 20px;
+  border: none;
+  border-top: var(--colYellow) solid 1px;
+  line-height: 140%;
+  padding: 15px, 0;
+}
+
+.timeSelector {
+  color: var(--colYellow);
+  font-size: 20px;
+  text-align: center;
+}
+
+.titleCard {
+  width: fit-content;
+  background-color: black;
+  padding: 24px;
+}
+
+.titleCard span {
+  color: white;
+}
+
+.relative {
+  position: relative;
+}
+.textFrame {
+  padding: 40px;
+}
+
+.halfContainer {
+  float: left;
+  max-width: 450px;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 250px;
+  padding-right: 10px;
+}
+.bgYellow {
+  background-color: var(--colYellow);
+}
+
+.bgYellow h2 {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.bgYellow p {
+  padding-left: 20px;
+}
+
+.caroselWrapper {
+  max-width: 100vw;
+  padding-left: 10.17vw;
+}
+
+#caroselText {
+  max-width: 71.5vw;
+}
+
+.slick-track {
+}
+
+#cityVideoText {
+  width: fit-content;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#cityVideo {
+  width: 71.5vw;
+}
+
+#FastForwardButton {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.cityButton {
+  float: left;
+  /* width: ; */
+  width: 250px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--colBlue);
+  border-radius: 5px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+}
+.cityButton span {
+  color: var(--colBlue);
+}
+
+.cityButton i {
+  color: var(--colBlue);
+}
+.fa-play {
+  margin-left: 60px;
+}
+
+.fa-pause {
+  margin-left: 60px;
+}
+
+.button01 {
+  padding: 14px;
+  width: 100%;
+  max-width: 254px;
+  background-color: var(--colBlue);
+  border-style: solid;
+  border-color: var(--colBlue);
+  border-width: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  color: white;
+}
+
+.button02 {
+  padding: 14px;
+  width: 254px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 5px;
+  float: left;
+  color: white;
+  margin-right: 10px;
+}
+#logo {
+  /* display: block; */
+  padding: 25px;
+  margin-left: 10%;
+  width: 250px;
+  /* float: left; */
+
+  height: auto;
+}
+
+#h1Wrapper {
+  width: 87vw;
+  padding: 120px 0;
+
+  margin: 0 auto;
+}
+
+#headerIMG {
+  z-index: -1;
+  position: absolute;
+  background-image: url(../assets/giu-vicente-c5UCzwjpQzY-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 85%;
+  background-size: 100%;
+  width: 100vw;
+  height: 85%;
+}
+
+#dropdownWrapper {
+  max-width: 700px;
+  min-width: 300px;
+  width: 700px;
+
+  /* background-color: aqua; */
+  float: right;
+  margin-right: 3%;
+}
+.yellowBar {
+  bottom: 0%;
+  height: 500px;
+  width: 100%;
+  background-color: var(--colYellow);
+}
+
+#bookingWrapper {
+  /* transform: translate(-50%, -50%); */
+  left: 50%;
+  margin: 0 auto;
+  width: 71.5%;
+}
+
+#bookingCard {
+  background-color: white;
+  max-width: 100%;
+}
+
+.dateTimeWrapper {
+  z-index: inherit;
+  width: 33%;
+  min-width: 150px;
+  padding: 44px 5% 44px 5%;
+  float: left;
+  margin: 0 auto;
+}
+
+.tourWrapper {
+  z-index: inherit;
+  width: 350px;
+  min-width: 150px;
+  padding: 44px 20px 44px 20px;
+  float: left;
+  margin: 0 auto;
+  /* margin-left: 50px; */
+}
+
+.dateTimeWrapper input {
+  width: 100%;
+  border: none;
+  border-bottom: lightgrey 1px solid;
+}
+
+.dateTimeWrapper select {
+  width: 100%;
+  border: none;
+  border-bottom: lightgrey 1px solid;
+}
+
+.dateTimeWrapper option {
+  width: 100%;
+  background-color: var(--colBlue);
+  color: var(--colYellow);
+  padding: 20px;
+  line-height: 140%;
+}
+
+#yellowTextWrapper {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+#yellowLogo {
+  width: 300px;
+  padding: 40px;
+  margin: 0 auto;
+  display: block;
+}
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+#GuidePopup {
+  /* display: none; */
+  position: absolute;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  background-color: var(--colBlue);
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+}
+
+#guideButton {
+  float: left;
+  min-width: 150px;
+  margin-right: calc(100% - 254px);
+}
+
+#ExitPopup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 5%;
+  color: white;
+}
+
+.guides {
+  margin: 0 auto;
+  padding: 20px;
+  /* width: 70%; */
+}
+
+.guidesContent {
+  width: 390px;
+  height: 140px;
+  background-color: #ffffff1a;
+  /* padding: 20px; */
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  margin-right: 25px;
+}
+
+.GuideTextWrapper {
+  float: left;
+  width: 60%;
+  padding: 40px 0 40px 20px;
+}
+
+.guidePortrait {
+  float: left;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#carosel {
+  overflow: hidden;
+  /* max-width: calc(100vw - 10.17vw); */
+  max-width: 100vw;
+}
+
+.caroselContent {
+  object-fit: cover;
+  width: 352px;
+  height: 359px;
+  border-radius: 10px;
+  background-color: red;
+  margin-right: 50px;
+}
+
+#cityVideo {
+  padding-top: 50px;
+}
+
+#playButtons {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  max-width: 90vw;
+  padding-top: 50px;
+}
+
+.playButtonsWrapper {
+  width: fit-content;
+}
+
+.inlineLogo {
+  background-image: url(../assets/icons/logo.png);
+  height: 60px;
+  background-repeat: no-repeat;
+  width: 60px;
+}
+
+.marginBottom {
+  margin-bottom: 140px;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.center {
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.whiteTextOverwrite {
+  color: white;
+  max-width: 600px;
+  display: block;
+}
+
+.yellowTextOverwrite {
+  color: var(--colYellow);
+}
+
+/* figures */
+.scribles {
+  position: absolute;
+}
+
+#scribble01 {
+  width: 340px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  left: 60%;
+  top: 100%;
+}
+
+#scribble02 {
+  width: 450px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  left: 60%;
+  top: calc(100% + 150px);
+}
+
+.selectIcon {
+  width: 23px;
+  margin: 10px;
+  height: auto;
+  float: right;
+}
+
+.ui-datepicker {
+  width: fit-content;
+  font-family: archivo;
+}
+
+.ui-datepicker tbody {
+  font-family: open-sans;
+}
+
+.ui-datepicker-header {
+  background-color: #ffffff1a;
+}
+
+.ui-widget-content {
+  background-color: var(--colBlue);
+}
+
+.ui-datepicker.ui-widget-content a {
+  background: #ffffff1a !important ;
+}
+
+.ui-datepicker .ui-widget-content a:hover {
+  /* background-color: var(--colBlue) !important ; */
+  border-color: var(--colBlue) !important ;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background-color: var(--colBlue) !important ;
+  border-color: var(--colBlue) !important ;
+}
+
+/* queries */
+@media all and (max-width: 1200px) {
+  #logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #playButtons {
+    max-width: 540px;
+    width: fit-content;
+  }
+
+  #dropdownWrapper {
+    width: 700px;
+  }
+}
+
+@media all and (max-width: 720px) {
+  main {
+    /* background-color: #7b9a6c; */
+  }
+
+  .tourWrapper {
+    float: none;
+    width: fit-content;
+  }
+
+  #dropdownWrapper {
+    width: fit-content;
+    margin: 0 auto;
+    float: none;
+  }
+
+  #headerIMG {
+    height: 85%;
+    background-size: auto, 100%;
+  }
+
+  .dateTimeWrapper {
+    float: none;
+    width: 80%;
+  }
+  #GuidePopup {
+    width: 80vw;
+  }
+
+  .caroselContent {
+    width: 70vw;
+  }
+  .halfContainer {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .scribles {
+    display: none;
+  }
+
+  #playButtons {
+    max-width: 220px;
+  }
+
+  .bgYellow h2 {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 45px;
+  }
+}
+
+@media all and (max-width: 480px) {
+}

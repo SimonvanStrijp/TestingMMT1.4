@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityGuide</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css" /> -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="assets/logo.svg" alt="logo" id="logo" />
+      <div id="dropdownWrapper">
+        <div class="tourWrapper">
+          <h5>Destinations</h5>
+          <select name="Destinations" id="Destinations" class="headerDropdown">
+            <option value="Maastricht">Maastricht</option>
+            <option value="Aachen">Aachen</option>
+            <option value="London">London</option>
+            <option value="Lisabon">Lisabon</option>
+            <option value="Schimmert">Schimmert</option>
+            <option value="Rotjaknor">Rotjaknor</option>
+            <option value="Dublin">Dublin</option>
+            browse by location
+          </select>
+        </div>
+        <div class="tourWrapper">
+          <h5>Featured tours</h5>
+          <select
+            name="FeaturedTours"
+            id="FeaturedTours"
+            class="headerDropdown"
+          >
+            <option value="guided tours">guided tours</option>
+            <option value="group tours">group tours</option>
+            <option value="couples">couples</option>
+            <option value="audio tours">audio tours</option>
+            <option value="boat tours">boat tours</option>
+          </select>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </nav>
+
+    <header class="relative">
+      <div id="headerIMG"></div>
+      <div id="h1Wrapper">
+        <h1 class="cityContent">MAASTRICHT</h1>
+      </div>
+
+      <!-- <div class="yellowBar relative"></div> -->
+      <div id="bookingWrapper">
+        <div class="titleCard">
+          <span>Book a guide in</span>
+          <span class="cityContent">Maastricht</span>
+        </div>
+
+        <div id="bookingCard">
+          <div class="dateTimeWrapper">
+            <label for="datepicker" class="greyText">Date</label>
+            <input type="text" id="datepicker" />
+            <img
+              src="assets/icons/noun_calender_863471.svg"
+              alt="Calender"
+              class="selectIcon"
+            />
+            <h5 id="dateText">geselecteerde datum</h5>
+            <div class="clear"></div>
+          </div>
+
+          <div class="dateTimeWrapper">
+            <label for="timepicker" class="greyText">Time</label>
+            <select id="timepicker" onchange="timeUpdate()">
+              <option value="8:00" class="timeSelector">8:00</option>
+              <option value="9:00" class="timeSelector">8:00</option>
+              <option value="8:30" class="timeSelector">9:30</option>
+              <option value="9:30" class="timeSelector">9:30</option>
+              <option value="10:00" class="timeSelector">10:00</option>
+              <option value="10:30" class="timeSelector">10:30</option>
+              <option value="11:00" class="timeSelector">11:00</option>
+              <option value="11:30" class="timeSelector">11:30</option>
+              <option value="14:00" class="timeSelector">14:00</option>
+              <option value="14:30" class="timeSelector">14:30</option>
+              <option value="15:00" class="timeSelector">15:00</option>
+              <option value="15:30" class="timeSelector">15:30</option>
+              <option value="16:00" class="timeSelector">16:00</option>
+              <option value="16:30" class="timeSelector">16:30</option>
+              <option value="17:00" class="timeSelector">17:00</option>
+              <option value="17:30" class="timeSelector">17:30</option>
+            </select>
+            <img
+              src="assets/icons/noun_clock_4237431.svg"
+              alt="Clock"
+              class="selectIcon"
+            />
+            <h5 id="timeText">geselecteerde tijd</h5>
+            <div class="clear"></div>
+          </div>
+
+          <div class="dateTimeWrapper">
+            <a href="#GuidePopup" class="button01" id="guideButton"
+              >Find your guide</a
+            >
+            <h5 class="greyText floatLeft">
+              We’ll choose the best match for you
+            </h5>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div id="GuidePopup" class="displayNone">
+        <img src="/assets/logoYellow.svg" alt="YellowLogo" id="yellowLogo" />
+        <img
+          src="/assets/icons/noun_Arrow_2335640.svg"
+          alt="exit"
+          id="ExitPopup"
+        />
+        <div class="textFrame">
+          <div class="halfContainer">
+            <h2 class="yellowTextOverwrite">we have found a match</h2>
+          </div>
+          <div class="halfContainer">
+            <p class="yellowTextOverwrite">
+              We fount the perfect guides for your city! Best yet, the guides
+              are available for you at your time. Let’s get you in touch now.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="guides">
+          <div class="guidesContent">
+            <img src="assets/image.jpg" alt="Hugo" class="guidePortrait" />
+            <div class="GuideTextWrapper">
+              <h4 class="whiteTextOverwrite">Hugo Marcus</h4>
+              <p class="greyText whiteTextOverwrite">
+                +6 years tour guide experience
+              </p>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="guidesContent">
+            <img src="assets/image-1.jpg" alt="Maria" class="guidePortrait" />
+            <div class="GuideTextWrapper">
+              <h4 class="whiteTextOverwrite">Maria Miosa</h4>
+              <p class="greyText whiteTextOverwrite">
+                +7 years tour guide experience
+              </p>
+            </div>
+            <div class="clear"></div>
+          </div>
+
+          <div class="guidesContent">
+            <img src="assets/image-2.jpg" alt="John" class="guidePortrait" />
+            <div class="GuideTextWrapper">
+              <h4 class="whiteTextOverwrite">John Doe</h4>
+              <p class="greyText whiteTextOverwrite">
+                +1 years tour guide experience
+              </p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="bgYellow marginBottom">
+        <section id="yellowTextWrapper">
+          <div class="relative">
+            <div class="halfContainer">
+              <h2>Start exploring today</h2>
+            </div>
+            <div class="halfContainer">
+              <p>
+                Mister guide offers a great way to tour a city. Book a guide
+                right now Aenean lacinia bibendum nulla sed consectetur. Nulla
+                vitae elit libero, a pharetra augue. Maecenas faucibus mollis
+                interdum.
+              </p>
+            </div>
+            <div class="clear"></div>
+
+            <img
+              src="assets/scribbles/SVG/Scribble_03.svg"
+              alt="scribble"
+              class="scribles"
+              id="scribble02"
+            />
+          </div>
+        </section>
+      </div>
+      <!-- end yellow -->
+
+      <div class="caroselWrapper marginBottom relative">
+        <div id="caroselText">
+          <h4>Looking for a guided tour? Sight seeing in</h4>
+          <h3 class="cityContent">Maastricht</h3>
+        </div>
+
+        <div class="carosel">
+          <img
+            src="assets/giu-vicente-eLhBzh160Lo-unsplash.jpg"
+            alt="church"
+            class="caroselContent"
+          />
+          <img
+            src="assets/hugo-lijzen-fBuHIaZbhEg-unsplash.jpg"
+            alt="church"
+            class="caroselContent"
+          />
+          <img
+            src="assets/jean-carlo-emer-6Mx5UMHtKO4-unsplash.jpg"
+            alt=""
+            class="caroselContent"
+          />
+          <img
+            src="assets/matti-tanskanen-Z1gi3JzZ7go-unsplash.jpg"
+            alt=""
+            class="caroselContent"
+          />
+          <img
+            src="/assets/giu-vicente-c5UCzwjpQzY-unsplash.jpg"
+            alt=""
+            class="caroselContent"
+          />
+        </div>
+        <img
+          src="assets/scribbles/SVG/Scribble_01.svg"
+          alt="scribble"
+          class="scribles"
+          id="scribble01"
+        />
+      </div>
+      <!-- end carosel -->
+
+      <section>
+        <div id="cityVideoText">
+          <h2>LOOK AT ALL THOSE HAPPY SMILES</h2>
+          <h4>follow mister guide around the globe</h4>
+        </div>
+        <div id="cityVideo" class="relative">
+          <img
+            src="assets/icons/noun-forward-1152657.svg"
+            alt="Fast Forward"
+            id="FastForwardButton"
+          />
+          <video width="100%" muted loop autoplay id="video">
+            <source src="Video/Video_Maastricht.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+      <!-- end video -->
+      <div id="playButtons" class="marginBottom">
+        <ul class="playButtonsWrapper floatLeft">
+          <a class="cityButton" id="0">
+            <span>Maastricht</span>
+            <i class="fa fa-play"></i>
+          </a>
+
+          <a class="cityButton" id="1">
+            <span>Aachen</span>
+            <i class="fa fa-play"></i>
+          </a>
+        </ul>
+
+        <ul class="playButtonsWrapper floatLeft">
+          <a class="cityButton" id="2">
+            <span>Schimmert</span>
+            <i class="fa fa-play"></i>
+          </a>
+          <a class="cityButton" id="3">
+            <span>New York</span>
+            <i class="fa fa-play"></i>
+          </a>
+          <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+      </div>
+
+      <!-- end selection buttons -->
+    </main>
+
+    <footer>
+      <div id="footerWrapper">
+        <h4 class="whiteTextOverwrite">
+          Need some help finding the perfect tour?
+        </h4>
+        <div>
+          <h2 class="whiteTextOverwrite floatLeft">CONTACT MR.GUIDE</h2>
+          <div class="inlineLogo floatLeft"></div>
+        </div>
+        <div class="clear"></div>
+        <a href="#" class="button02">&#9742; 9100-555-555</a>
+        <a href="" class="button01">Send us a mail</a>
+        <div class="clear"></div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cheat.js"></script>
+  </body>
+</html>
